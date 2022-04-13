@@ -1,0 +1,187 @@
+"","Year","recruitment","high_recruitment","low_recruitment","low_SSB","SSB","high_SSB","catches","landings","discards","low_F","F","high_F","StockPublishNote","Purpose","Fage","fishstock","recruitment_age","AssessmentYear","units","stockSizeDescription","stockSizeUnits","fishingPressureDescription","fishingPressureUnits"
+"1",1991,NA,NA,NA,NA,NA,NA,NA,17441,NA,NA,NA,NA,"Stock published","Advice",NA,"anf.27.3a46",NA,2021,"tonnes","SSB","tonnes","F","Year-1"
+"2",1992,NA,NA,NA,NA,NA,NA,NA,21872,NA,NA,NA,NA,"Stock published","Advice",NA,"anf.27.3a46",NA,2021,"tonnes","SSB","tonnes","F","Year-1"
+"3",1993,NA,NA,NA,NA,NA,NA,NA,23971,NA,NA,NA,NA,"Stock published","Advice",NA,"anf.27.3a46",NA,2021,"tonnes","SSB","tonnes","F","Year-1"
+"4",1994,NA,NA,NA,NA,NA,NA,NA,25057,NA,NA,NA,NA,"Stock published","Advice",NA,"anf.27.3a46",NA,2021,"tonnes","SSB","tonnes","F","Year-1"
+"5",1995,NA,NA,NA,NA,NA,NA,NA,28913,NA,NA,NA,NA,"Stock published","Advice",NA,"anf.27.3a46",NA,2021,"tonnes","SSB","tonnes","F","Year-1"
+"6",1996,NA,NA,NA,NA,NA,NA,NA,35100,NA,NA,NA,NA,"Stock published","Advice",NA,"anf.27.3a46",NA,2021,"tonnes","SSB","tonnes","F","Year-1"
+"7",1997,NA,NA,NA,NA,NA,NA,NA,32728,NA,NA,NA,NA,"Stock published","Advice",NA,"anf.27.3a46",NA,2021,"tonnes","SSB","tonnes","F","Year-1"
+"8",1998,NA,NA,NA,NA,NA,NA,NA,25293,NA,NA,NA,NA,"Stock published","Advice",NA,"anf.27.3a46",NA,2021,"tonnes","SSB","tonnes","F","Year-1"
+"9",1999,NA,NA,NA,NA,NA,NA,NA,21854,NA,NA,NA,NA,"Stock published","Advice",NA,"anf.27.3a46",NA,2021,"tonnes","SSB","tonnes","F","Year-1"
+"10",2000,NA,NA,NA,NA,NA,NA,NA,19682,NA,NA,NA,NA,"Stock published","Advice",NA,"anf.27.3a46",NA,2021,"tonnes","SSB","tonnes","F","Year-1"
+"11",2001,NA,NA,NA,NA,NA,NA,NA,19157,NA,NA,NA,NA,"Stock published","Advice",NA,"anf.27.3a46",NA,2021,"tonnes","SSB","tonnes","F","Year-1"
+"12",2002,NA,NA,NA,NA,NA,NA,NA,15067,NA,NA,NA,NA,"Stock published","Advice",NA,"anf.27.3a46",NA,2021,"tonnes","SSB","tonnes","F","Year-1"
+"13",2003,NA,NA,NA,NA,NA,NA,NA,12008,NA,NA,NA,NA,"Stock published","Advice",NA,"anf.27.3a46",NA,2021,"tonnes","SSB","tonnes","F","Year-1"
+"14",2004,NA,NA,NA,NA,NA,NA,NA,11976,NA,NA,NA,NA,"Stock published","Advice",NA,"anf.27.3a46",NA,2021,"tonnes","SSB","tonnes","F","Year-1"
+"15",2005,NA,NA,NA,23,39,54,NA,13728,NA,NA,NA,NA,"Stock published","Advice",NA,"anf.27.3a46",NA,2021,"tonnes","SSB","tonnes","F","Year-1"
+"16",2006,NA,NA,NA,34,41,47,NA,13292,NA,NA,NA,NA,"Stock published","Advice",NA,"anf.27.3a46",NA,2021,"tonnes","SSB","tonnes","F","Year-1"
+"17",2007,NA,NA,NA,44,50,57,NA,14564,490,NA,0.964,NA,"Stock published","Advice",NA,"anf.27.3a46",NA,2021,"tonnes","SSB","tonnes","F","Year-1"
+"18",2008,NA,NA,NA,42,54,65,NA,15878,903,NA,1.012,NA,"Stock published","Advice",NA,"anf.27.3a46",NA,2021,"tonnes","SSB","tonnes","F","Year-1"
+"19",2009,NA,NA,NA,33,38,43,NA,15372,38,NA,1.307,NA,"Stock published","Advice",NA,"anf.27.3a46",NA,2021,"tonnes","SSB","tonnes","F","Year-1"
+"20",2010,NA,NA,NA,30,42,54,NA,12136,69,NA,0.932,NA,"Stock published","Advice",NA,"anf.27.3a46",NA,2021,"tonnes","SSB","tonnes","F","Year-1"
+"21",2011,NA,NA,NA,25,33,42,NA,12902,95,NA,1.262,NA,"Stock published","Advice",NA,"anf.27.3a46",NA,2021,"tonnes","SSB","tonnes","F","Year-1"
+"22",2012,NA,NA,NA,30,36,43,NA,11143,590,NA,1.043,NA,"Stock published","Advice",NA,"anf.27.3a46",NA,2021,"tonnes","SSB","tonnes","F","Year-1"
+"23",2013,NA,NA,NA,31,38,46,NA,11375,687,NA,1.014,NA,"Stock published","Advice",NA,"anf.27.3a46",NA,2021,"tonnes","SSB","tonnes","F","Year-1"
+"24",2014,NA,NA,NA,43,53,63,NA,14406,448,NA,0.907,NA,"Stock published","Advice",NA,"anf.27.3a46",NA,2021,"tonnes","SSB","tonnes","F","Year-1"
+"25",2015,NA,NA,NA,59,68,77,NA,15663,395,NA,0.763,NA,"Stock published","Advice",NA,"anf.27.3a46",NA,2021,"tonnes","SSB","tonnes","F","Year-1"
+"26",2016,NA,NA,NA,67,78,89,NA,19412,981,NA,0.845,NA,"Stock published","Advice",NA,"anf.27.3a46",NA,2021,"tonnes","SSB","tonnes","F","Year-1"
+"27",2017,NA,NA,NA,74,88,102,NA,21719,756,NA,0.825,NA,"Stock published","Advice",NA,"anf.27.3a46",NA,2021,"tonnes","SSB","tonnes","F","Year-1"
+"28",2018,NA,NA,NA,66,78,89,NA,21572,326,NA,0.91,NA,"Stock published","Advice",NA,"anf.27.3a46",NA,2021,"tonnes","SSB","tonnes","F","Year-1"
+"29",2019,NA,NA,NA,46,59,71,NA,21551,513,NA,1.216,NA,"Stock published","Advice",NA,"anf.27.3a46",NA,2021,"tonnes","SSB","tonnes","F","Year-1"
+"30",2020,NA,NA,NA,NA,NA,NA,NA,19072,316,NA,NA,NA,"Stock published","Advice",NA,"anf.27.3a46",NA,2021,"tonnes","SSB","tonnes","F","Year-1"
+"31",2021,NA,NA,NA,37,48,59,NA,NA,NA,NA,NA,NA,"Stock published","Advice",NA,"anf.27.3a46",NA,2021,"tonnes","SSB","tonnes","F","Year-1"
+"32",1986,NA,NA,NA,NA,NA,NA,NA,8217,NA,NA,NA,NA,"Stock published","Advice",NA,"ank.27.78abd",NA,2021,"tonnes","Biomass Index","Kilograms per hour","F/Fmsy","ratio"
+"33",1987,NA,NA,NA,NA,NA,NA,NA,7618,NA,NA,NA,NA,"Stock published","Advice",NA,"ank.27.78abd",NA,2021,"tonnes","Biomass Index","Kilograms per hour","F/Fmsy","ratio"
+"34",1988,NA,NA,NA,NA,NA,NA,NA,8381,NA,NA,NA,NA,"Stock published","Advice",NA,"ank.27.78abd",NA,2021,"tonnes","Biomass Index","Kilograms per hour","F/Fmsy","ratio"
+"35",1989,NA,NA,NA,NA,NA,NA,NA,8821,NA,NA,NA,NA,"Stock published","Advice",NA,"ank.27.78abd",NA,2021,"tonnes","Biomass Index","Kilograms per hour","F/Fmsy","ratio"
+"36",1990,NA,NA,NA,NA,NA,NA,NA,9631,NA,NA,NA,NA,"Stock published","Advice",NA,"ank.27.78abd",NA,2021,"tonnes","Biomass Index","Kilograms per hour","F/Fmsy","ratio"
+"37",1991,NA,NA,NA,NA,NA,NA,NA,8779,NA,NA,NA,NA,"Stock published","Advice",NA,"ank.27.78abd",NA,2021,"tonnes","Biomass Index","Kilograms per hour","F/Fmsy","ratio"
+"38",1992,NA,NA,NA,NA,NA,NA,NA,8176,NA,NA,NA,NA,"Stock published","Advice",NA,"ank.27.78abd",NA,2021,"tonnes","Biomass Index","Kilograms per hour","F/Fmsy","ratio"
+"39",1993,NA,NA,NA,NA,NA,NA,NA,6567,NA,NA,NA,NA,"Stock published","Advice",NA,"ank.27.78abd",NA,2021,"tonnes","Biomass Index","Kilograms per hour","F/Fmsy","ratio"
+"40",1994,NA,NA,NA,NA,NA,NA,NA,5745,NA,NA,NA,NA,"Stock published","Advice",NA,"ank.27.78abd",NA,2021,"tonnes","Biomass Index","Kilograms per hour","F/Fmsy","ratio"
+"41",1995,NA,NA,NA,NA,NA,NA,NA,6954,NA,NA,NA,NA,"Stock published","Advice",NA,"ank.27.78abd",NA,2021,"tonnes","Biomass Index","Kilograms per hour","F/Fmsy","ratio"
+"42",1996,NA,NA,NA,NA,NA,NA,NA,8093,NA,NA,NA,NA,"Stock published","Advice",NA,"ank.27.78abd",NA,2021,"tonnes","Biomass Index","Kilograms per hour","F/Fmsy","ratio"
+"43",1997,NA,NA,NA,NA,NA,NA,NA,8116,NA,NA,NA,NA,"Stock published","Advice",NA,"ank.27.78abd",NA,2021,"tonnes","Biomass Index","Kilograms per hour","F/Fmsy","ratio"
+"44",1998,NA,NA,NA,NA,NA,NA,NA,8598,NA,NA,NA,NA,"Stock published","Advice",NA,"ank.27.78abd",NA,2021,"tonnes","Biomass Index","Kilograms per hour","F/Fmsy","ratio"
+"45",1999,NA,NA,NA,NA,NA,NA,NA,6738,NA,NA,NA,NA,"Stock published","Advice",NA,"ank.27.78abd",NA,2021,"tonnes","Biomass Index","Kilograms per hour","F/Fmsy","ratio"
+"46",2000,NA,NA,NA,NA,NA,NA,NA,6644,NA,NA,NA,NA,"Stock published","Advice",NA,"ank.27.78abd",NA,2021,"tonnes","Biomass Index","Kilograms per hour","F/Fmsy","ratio"
+"47",2001,NA,NA,NA,NA,NA,NA,NA,5728,NA,NA,NA,NA,"Stock published","Advice",NA,"ank.27.78abd",NA,2021,"tonnes","Biomass Index","Kilograms per hour","F/Fmsy","ratio"
+"48",2002,NA,NA,NA,NA,NA,NA,NA,6505,NA,NA,NA,NA,"Stock published","Advice",NA,"ank.27.78abd",NA,2021,"tonnes","Biomass Index","Kilograms per hour","F/Fmsy","ratio"
+"49",2003,0,0,0,0.662,1.03,1.397,8351,8171,179,NA,1.921,NA,"Stock published","Advice",NA,"ank.27.78abd",NA,2021,"tonnes","Biomass Index","Kilograms per hour","F/Fmsy","ratio"
+"50",2004,2,3,1,0.824,1.228,1.633,8213,7537,676,NA,1.583,NA,"Stock published","Advice",NA,"ank.27.78abd",NA,2021,"tonnes","Biomass Index","Kilograms per hour","F/Fmsy","ratio"
+"51",2005,1,1,0,0.756,1.128,1.5,7914,7187,727,NA,1.662,NA,"Stock published","Advice",NA,"ank.27.78abd",NA,2021,"tonnes","Biomass Index","Kilograms per hour","F/Fmsy","ratio"
+"52",2006,1,1,0,1.087,1.514,1.941,6835,6131,704,NA,1.069,NA,"Stock published","Advice",NA,"ank.27.78abd",NA,2021,"tonnes","Biomass Index","Kilograms per hour","F/Fmsy","ratio"
+"53",2007,1,1,1,1.223,1.722,2.221,7021,6608,413,NA,0.966,NA,"Stock published","Advice",NA,"ank.27.78abd",NA,2021,"tonnes","Biomass Index","Kilograms per hour","F/Fmsy","ratio"
+"54",2008,2,2,1,2.222,2.921,3.62,8985,7399,1585,NA,0.729,NA,"Stock published","Advice",NA,"ank.27.78abd",NA,2021,"tonnes","Biomass Index","Kilograms per hour","F/Fmsy","ratio"
+"55",2009,0,0,0,1.615,2.187,2.758,10400,8287,2113,NA,1.126,NA,"Stock published","Advice",NA,"ank.27.78abd",NA,2021,"tonnes","Biomass Index","Kilograms per hour","F/Fmsy","ratio"
+"56",2010,1,1,0,1.418,2.004,2.589,10062,8626,1436,NA,1.189,NA,"Stock published","Advice",NA,"ank.27.78abd",NA,2021,"tonnes","Biomass Index","Kilograms per hour","F/Fmsy","ratio"
+"57",2011,2,3,1,1.393,1.926,2.458,10319,9348,971,NA,1.269,NA,"Stock published","Advice",NA,"ank.27.78abd",NA,2021,"tonnes","Biomass Index","Kilograms per hour","F/Fmsy","ratio"
+"58",2012,1,2,0,1.394,2.01,2.625,9888,8429,1459,NA,1.165,NA,"Stock published","Advice",NA,"ank.27.78abd",NA,2021,"tonnes","Biomass Index","Kilograms per hour","F/Fmsy","ratio"
+"59",2013,5,7,3,1.748,2.345,2.942,12760,10475,2285,NA,1.289,NA,"Stock published","Advice",NA,"ank.27.78abd",NA,2021,"tonnes","Biomass Index","Kilograms per hour","F/Fmsy","ratio"
+"60",2014,2,2,1,1.473,2.001,2.529,12402,9832,2570,NA,1.468,NA,"Stock published","Advice",NA,"ank.27.78abd",NA,2021,"tonnes","Biomass Index","Kilograms per hour","F/Fmsy","ratio"
+"61",2015,1,2,1,1.187,1.801,2.416,11109,9649,1460,NA,1.46,NA,"Stock published","Advice",NA,"ank.27.78abd",NA,2021,"tonnes","Biomass Index","Kilograms per hour","F/Fmsy","ratio"
+"62",2016,1,2,1,1.818,2.419,3.021,12660,10220,2441,NA,1.239,NA,"Stock published","Advice",NA,"ank.27.78abd",NA,2021,"tonnes","Biomass Index","Kilograms per hour","F/Fmsy","ratio"
+"63",2017,1,1,1,2.191,2.877,3.779,13460,11690,1770,NA,1.107,NA,"Stock published","Advice",NA,"ank.27.78abd",NA,2021,"tonnes","Biomass Index","Kilograms per hour","F/Fmsy","ratio"
+"64",2018,2,3,1,3.433,4.437,5.44,10803,10076,727,NA,0.577,NA,"Stock published","Advice",NA,"ank.27.78abd",NA,2021,"tonnes","Biomass Index","Kilograms per hour","F/Fmsy","ratio"
+"65",2019,2,2,1,3.472,4.434,5.396,10764,9680,1084,NA,0.575,NA,"Stock published","Advice",NA,"ank.27.78abd",NA,2021,"tonnes","Biomass Index","Kilograms per hour","F/Fmsy","ratio"
+"66",2020,7,10,5,3.346,4.416,5.487,9531,8676,855,NA,0.511,NA,"Stock published","Advice",NA,"ank.27.78abd",NA,2021,"tonnes","Biomass Index","Kilograms per hour","F/Fmsy","ratio"
+"67",1980,NA,NA,NA,0.66,1.36,2.81,NA,2110,NA,0.52,0.96,1.78,"Stock published","Advice",NA,"ank.27.8c9a",NA,2021,"tonnes","Relative biomass","tonnes","Relative fishing pressure",NA
+"68",1981,NA,NA,NA,0.7,1.36,2.65,NA,2300,NA,0.57,1.03,1.86,"Stock published","Advice",NA,"ank.27.8c9a",NA,2021,"tonnes","Relative biomass","tonnes","Relative fishing pressure",NA
+"69",1982,NA,NA,NA,0.72,1.35,2.54,NA,2369,NA,0.61,1.08,1.93,"Stock published","Advice",NA,"ank.27.8c9a",NA,2021,"tonnes","Relative biomass","tonnes","Relative fishing pressure",NA
+"70",1983,NA,NA,NA,0.73,1.34,2.45,NA,2379,NA,0.58,1.02,1.79,"Stock published","Advice",NA,"ank.27.8c9a",NA,2021,"tonnes","Relative biomass","tonnes","Relative fishing pressure",NA
+"71",1984,NA,NA,NA,0.71,1.27,2.28,NA,1929,NA,0.51,0.88,1.52,"Stock published","Advice",NA,"ank.27.8c9a",NA,2021,"tonnes","Relative biomass","tonnes","Relative fishing pressure",NA
+"72",1985,NA,NA,NA,0.69,1.21,2.14,NA,1833,NA,0.57,0.97,1.65,"Stock published","Advice",NA,"ank.27.8c9a",NA,2021,"tonnes","Relative biomass","tonnes","Relative fishing pressure",NA
+"73",1986,NA,NA,NA,0.73,1.26,2.17,NA,2563,NA,0.73,1.39,2.61,"Stock published","Advice",NA,"ank.27.8c9a",NA,2021,"tonnes","Relative biomass","tonnes","Relative fishing pressure",NA
+"74",1987,NA,NA,NA,0.73,1.36,2.55,NA,3832,NA,0.82,1.82,4.02,"Stock published","Advice",NA,"ank.27.8c9a",NA,2021,"tonnes","Relative biomass","tonnes","Relative fishing pressure",NA
+"75",1988,NA,NA,NA,0.62,1.33,2.85,NA,3700,NA,0.74,1.6,3.46,"Stock published","Advice",NA,"ank.27.8c9a",NA,2021,"tonnes","Relative biomass","tonnes","Relative fishing pressure",NA
+"76",1989,NA,NA,NA,0.55,1.14,2.37,NA,2578,NA,0.64,1.35,2.83,"Stock published","Advice",NA,"ank.27.8c9a",NA,2021,"tonnes","Relative biomass","tonnes","Relative fishing pressure",NA
+"77",1990,NA,NA,NA,0.52,1.05,2.12,NA,2334,NA,0.64,1.36,2.89,"Stock published","Advice",NA,"ank.27.8c9a",NA,2021,"tonnes","Relative biomass","tonnes","Relative fishing pressure",NA
+"78",1991,NA,NA,NA,0.48,0.98,2.01,NA,2162,NA,0.69,1.39,2.83,"Stock published","Advice",NA,"ank.27.8c9a",NA,2021,"tonnes","Relative biomass","tonnes","Relative fishing pressure",NA
+"79",1992,NA,NA,NA,0.45,0.89,1.73,NA,2111,NA,0.81,1.63,3.27,"Stock published","Advice",NA,"ank.27.8c9a",NA,2021,"tonnes","Relative biomass","tonnes","Relative fishing pressure",NA
+"80",1993,NA,NA,NA,0.42,0.82,1.6,NA,2227,NA,0.84,1.58,3,"Stock published","Advice",NA,"ank.27.8c9a",NA,2021,"tonnes","Relative biomass","tonnes","Relative fishing pressure",NA
+"81",1994,NA,NA,NA,0.38,0.69,1.28,NA,1580,NA,0.83,1.51,2.75,"Stock published","Advice",NA,"ank.27.8c9a",NA,2021,"tonnes","Relative biomass","tonnes","Relative fishing pressure",NA
+"82",1995,NA,NA,NA,0.36,0.65,1.18,NA,1843,NA,0.89,1.66,3.08,"Stock published","Advice",NA,"ank.27.8c9a",NA,2021,"tonnes","Relative biomass","tonnes","Relative fishing pressure",NA
+"83",1996,NA,NA,NA,0.35,0.63,1.16,NA,1629,NA,0.87,1.6,2.94,"Stock published","Advice",NA,"ank.27.8c9a",NA,2021,"tonnes","Relative biomass","tonnes","Relative fishing pressure",NA
+"84",1997,NA,NA,NA,0.34,0.61,1.11,NA,1813,NA,1.01,1.91,3.64,"Stock published","Advice",NA,"ank.27.8c9a",NA,2021,"tonnes","Relative biomass","tonnes","Relative fishing pressure",NA
+"85",1998,NA,NA,NA,0.33,0.62,1.15,NA,2089,NA,1.01,2.06,4.2,"Stock published","Advice",NA,"ank.27.8c9a",NA,2021,"tonnes","Relative biomass","tonnes","Relative fishing pressure",NA
+"86",1999,NA,NA,NA,0.3,0.6,1.19,NA,1879,NA,0.82,1.73,3.64,"Stock published","Advice",NA,"ank.27.8c9a",NA,2021,"tonnes","Relative biomass","tonnes","Relative fishing pressure",NA
+"87",2000,NA,NA,NA,0.27,0.56,1.15,NA,1369,NA,0.63,1.31,2.72,"Stock published","Advice",NA,"ank.27.8c9a",NA,2021,"tonnes","Relative biomass","tonnes","Relative fishing pressure",NA
+"88",2001,NA,NA,NA,0.26,0.54,1.08,NA,1013,NA,0.48,0.97,1.98,"Stock published","Advice",NA,"ank.27.8c9a",NA,2021,"tonnes","Relative biomass","tonnes","Relative fishing pressure",NA
+"89",2002,NA,NA,NA,0.27,0.54,1.07,NA,810,NA,0.42,0.86,1.77,"Stock published","Advice",NA,"ank.27.8c9a",NA,2021,"tonnes","Relative biomass","tonnes","Relative fishing pressure",NA
+"90",2003,NA,NA,NA,0.29,0.59,1.18,NA,934,NA,0.44,0.94,1.99,"Stock published","Advice",NA,"ank.27.8c9a",NA,2021,"tonnes","Relative biomass","tonnes","Relative fishing pressure",NA
+"91",2004,NA,NA,NA,0.31,0.63,1.29,NA,993,NA,0.44,0.9,1.84,"Stock published","Advice",NA,"ank.27.8c9a",NA,2021,"tonnes","Relative biomass","tonnes","Relative fishing pressure",NA
+"92",2005,NA,NA,NA,0.32,0.63,1.25,NA,933,NA,0.44,0.9,1.84,"Stock published","Advice",NA,"ank.27.8c9a",NA,2021,"tonnes","Relative biomass","tonnes","Relative fishing pressure",NA
+"93",2006,NA,NA,NA,0.33,0.66,1.32,NA,1161,NA,0.48,1.04,2.28,"Stock published","Advice",NA,"ank.27.8c9a",NA,2021,"tonnes","Relative biomass","tonnes","Relative fishing pressure",NA
+"94",2007,NA,NA,NA,0.35,0.75,1.59,NA,1306,NA,0.41,0.91,2.02,"Stock published","Advice",NA,"ank.27.8c9a",NA,2021,"tonnes","Relative biomass","tonnes","Relative fishing pressure",NA
+"95",2008,NA,NA,NA,0.36,0.76,1.62,NA,957,NA,0.32,0.66,1.39,"Stock published","Advice",NA,"ank.27.8c9a",NA,2021,"tonnes","Relative biomass","tonnes","Relative fishing pressure",NA
+"96",2009,NA,NA,NA,0.37,0.76,1.54,NA,774,NA,0.26,0.55,1.13,"Stock published","Advice",NA,"ank.27.8c9a",NA,2021,"tonnes","Relative biomass","tonnes","Relative fishing pressure",NA
+"97",2010,NA,NA,NA,0.4,0.81,1.62,NA,754,NA,0.25,0.54,1.14,"Stock published","Advice",NA,"ank.27.8c9a",NA,2021,"tonnes","Relative biomass","tonnes","Relative fishing pressure",NA
+"98",2011,NA,NA,NA,0.45,0.91,1.87,NA,948,NA,0.26,0.61,1.4,"Stock published","Advice",NA,"ank.27.8c9a",NA,2021,"tonnes","Relative biomass","tonnes","Relative fishing pressure",NA
+"99",2012,NA,NA,NA,0.48,1.05,2.32,NA,1141,NA,0.26,0.61,1.45,"Stock published","Advice",NA,"ank.27.8c9a",NA,2021,"tonnes","Relative biomass","tonnes","Relative fishing pressure",NA
+"100",2013,NA,NA,NA,0.49,1.11,2.49,NA,1071,NA,0.25,0.55,1.24,"Stock published","Advice",NA,"ank.27.8c9a",NA,2021,"tonnes","Relative biomass","tonnes","Relative fishing pressure",NA
+"101",2014,NA,NA,NA,0.52,1.1,2.33,NA,998,NA,0.25,0.55,1.19,"Stock published","Advice",NA,"ank.27.8c9a",NA,2021,"tonnes","Relative biomass","tonnes","Relative fishing pressure",NA
+"102",2015,NA,NA,NA,0.53,1.11,2.29,NA,1047,NA,0.26,0.56,1.21,"Stock published","Advice",NA,"ank.27.8c9a",NA,2021,"tonnes","Relative biomass","tonnes","Relative fishing pressure",NA
+"103",2016,NA,NA,NA,0.55,1.13,2.33,NA,1014,NA,0.24,0.5,1.06,"Stock published","Advice",NA,"ank.27.8c9a",NA,2021,"tonnes","Relative biomass","tonnes","Relative fishing pressure",NA
+"104",2017,NA,NA,NA,0.56,1.11,2.2,NA,861,NA,0.22,0.44,0.9,"Stock published","Advice",NA,"ank.27.8c9a",NA,2021,"tonnes","Relative biomass","tonnes","Relative fishing pressure",NA
+"105",2018,NA,NA,NA,0.57,1.1,2.11,NA,773,NA,0.19,0.38,0.75,"Stock published","Advice",NA,"ank.27.8c9a",NA,2021,"tonnes","Relative biomass","tonnes","Relative fishing pressure",NA
+"106",2019,NA,NA,NA,0.59,1.1,2.06,NA,669,NA,0.19,0.36,0.7,"Stock published","Advice",NA,"ank.27.8c9a",NA,2021,"tonnes","Relative biomass","tonnes","Relative fishing pressure",NA
+"107",2020,NA,NA,NA,0.63,1.17,2.16,NA,793,NA,0.19,0.39,0.8,"Stock published","Advice",NA,"ank.27.8c9a",NA,2021,"tonnes","Relative biomass","tonnes","Relative fishing pressure",NA
+"108",2021,NA,NA,NA,0.69,1.27,2.35,NA,NA,NA,NA,NA,NA,"Stock published","Advice",NA,"ank.27.8c9a",NA,2021,"tonnes","Relative biomass","tonnes","Relative fishing pressure",NA
+"109",1986,40236,45839,34632,33706,51093,68480,26842,24981,1861,0.216,0.28,0.345,"Stock published","Advice","3-6","mon.27.78abd",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"110",1987,30125,34389,25862,40563,60055,79547,24812,23091,1721,0.229,0.296,0.364,"Stock published","Advice","3-6","mon.27.78abd",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"111",1988,22005,25099,18911,39901,59307,78713,22902,21314,1588,0.255,0.325,0.395,"Stock published","Advice","3-6","mon.27.78abd",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"112",1989,8786,10033,7540,34515,52594,70672,25804,24015,1789,0.28,0.362,0.444,"Stock published","Advice","3-6","mon.27.78abd",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"113",1990,17402,19804,14999,29458,47285,65112,22545,20982,1563,0.279,0.36,0.441,"Stock published","Advice","3-6","mon.27.78abd",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"114",1991,37087,42020,32154,30414,46950,63487,18012,16763,1249,0.26,0.34,0.419,"Stock published","Advice","3-6","mon.27.78abd",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"115",1992,29915,33935,25896,27582,43097,58611,14632,13617,1015,0.194,0.252,0.311,"Stock published","Advice","3-6","mon.27.78abd",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"116",1993,33598,38138,29058,28193,43918,59644,16005,14895,1110,0.201,0.256,0.311,"Stock published","Advice","3-6","mon.27.78abd",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"117",1994,29960,33988,25932,24785,39508,54231,18483,17201,1282,0.268,0.336,0.404,"Stock published","Advice","3-6","mon.27.78abd",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"118",1995,15952,18138,13766,25531,40370,55209,22600,21033,1567,0.281,0.351,0.421,"Stock published","Advice","3-6","mon.27.78abd",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"119",1996,17695,20115,15275,28135,40559,52984,25072,23333,1739,0.294,0.366,0.438,"Stock published","Advice","3-6","mon.27.78abd",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"120",1997,18837,21404,16271,28443,40790,53138,24696,22983,1713,0.353,0.435,0.516,"Stock published","Advice","3-6","mon.27.78abd",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"121",1998,37009,42058,31960,27294,39173,51053,22000,20474,1526,0.334,0.411,0.488,"Stock published","Advice","3-6","mon.27.78abd",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"122",1999,24496,27732,21260,25375,36945,48515,20192,18792,1400,0.407,0.502,0.597,"Stock published","Advice","3-6","mon.27.78abd",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"123",2000,42953,48633,37274,18372,28639,38905,15528,14451,1077,0.27,0.336,0.402,"Stock published","Advice","3-6","mon.27.78abd",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"124",2001,63547,71714,55379,19275,30371,41468,18583,17294,1289,0.375,0.455,0.534,"Stock published","Advice","3-6","mon.27.78abd",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"125",2002,41512,46772,36253,16468,26123,35778,23728,22083,1645,0.372,0.449,0.527,"Stock published","Advice","3-6","mon.27.78abd",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"126",2003,49094,54085,44103,16941,24337,31733,30444,27933,2511,0.425,0.506,0.587,"Stock published","Advice","3-6","mon.27.78abd",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"127",2004,66188,73223,59154,14934,21430,27925,31439,29028,2411,0.494,0.589,0.685,"Stock published","Advice","3-6","mon.27.78abd",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"128",2005,28810,31637,25983,16240,23183,30125,29980,27869,2110,0.391,0.48,0.568,"Stock published","Advice","3-6","mon.27.78abd",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"129",2006,22379,24585,20172,18891,26043,33195,28545,27652,892,0.287,0.354,0.422,"Stock published","Advice","3-6","mon.27.78abd",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"130",2007,28539,31389,25688,21211,29582,37954,32029,31213,816,0.329,0.401,0.473,"Stock published","Advice","3-6","mon.27.78abd",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"131",2008,45647,50249,41044,25884,35904,45924,28046,27053,993,0.343,0.418,0.492,"Stock published","Advice","3-6","mon.27.78abd",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"132",2009,49794,54910,44679,30449,41245,52040,23913,21835,2078,0.347,0.424,0.501,"Stock published","Advice","3-6","mon.27.78abd",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"133",2010,56944,62790,51098,25449,36112,46776,24886,22215,2672,0.343,0.42,0.496,"Stock published","Advice","3-6","mon.27.78abd",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"134",2011,33197,36586,29807,23002,34050,45099,26489,24657,1832,0.302,0.369,0.436,"Stock published","Advice","3-6","mon.27.78abd",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"135",2012,44889,49346,40432,24168,35839,47510,30519,28188,2330,0.33,0.406,0.482,"Stock published","Advice","3-6","mon.27.78abd",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"136",2013,38132,42022,34242,25628,36569,47510,32295,30611,1684,0.284,0.36,0.436,"Stock published","Advice","3-6","mon.27.78abd",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"137",2014,53354,59202,47506,29283,40928,52574,30333,28474,1859,0.301,0.377,0.453,"Stock published","Advice","3-6","mon.27.78abd",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"138",2015,30610,33939,27282,35205,49277,63348,30183,27859,2324,0.277,0.348,0.42,"Stock published","Advice","3-6","mon.27.78abd",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"139",2016,26306,29449,23164,33043,47624,62204,32668,29083,3585,0.275,0.353,0.431,"Stock published","Advice","3-6","mon.27.78abd",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"140",2017,39684,45062,34307,36300,52782,69263,27808,25634,2175,0.275,0.352,0.43,"Stock published","Advice","3-6","mon.27.78abd",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"141",2018,51608,59415,43800,36659,54935,73211,23595,22345,1250,0.219,0.289,0.36,"Stock published","Advice","3-6","mon.27.78abd",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"142",2019,43833,52682,34984,41238,60871,80504,22710,21266,1444,0.179,0.241,0.303,"Stock published","Advice","3-6","mon.27.78abd",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"143",2020,48519,62869,34169,40036,59807,79577,21491,20156,1335,0.174,0.233,0.292,"Stock published","Advice","3-6","mon.27.78abd",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"144",2021,32708,NA,NA,NA,64190,NA,NA,NA,NA,NA,NA,NA,"Stock published","Advice","3-6","mon.27.78abd",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"145",1980,678,1070,285,5932,9817,13702,NA,4816,NA,0.267,0.296,0.325,"Stock published","Advice",NA,"mon.27.8c9a",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"146",1981,1933,2568,1298,7928,11387,14845,NA,5568,NA,0.297,0.327,0.356,"Stock published","Advice",NA,"mon.27.8c9a",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"147",1982,7350,8601,6100,9122,11913,14703,NA,5782,NA,0.344,0.376,0.407,"Stock published","Advice",NA,"mon.27.8c9a",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"148",1983,1946,2732,1159,8403,10647,12890,NA,6114,NA,0.464,0.488,0.513,"Stock published","Advice",NA,"mon.27.8c9a",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"149",1984,774,1060,489,7031,8821,10612,NA,6032,NA,0.483,0.507,0.532,"Stock published","Advice",NA,"mon.27.8c9a",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"150",1985,1829,2240,1418,7081,8418,9756,NA,6139,NA,0.51,0.534,0.559,"Stock published","Advice",NA,"mon.27.8c9a",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"151",1986,6525,7229,5822,6778,7766,8755,NA,6870,NA,0.767,0.803,0.839,"Stock published","Advice",NA,"mon.27.8c9a",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"152",1987,3708,4227,3189,4085,4799,5512,NA,5141,NA,0.897,0.923,0.949,"Stock published","Advice",NA,"mon.27.8c9a",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"153",1988,1078,1347,810,2619,3146,3673,NA,6321,NA,1.368,1.394,1.421,"Stock published","Advice",NA,"mon.27.8c9a",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"154",1989,3332,3679,2985,2189,2483,2777,NA,4996,NA,1.069,1.094,1.119,"Stock published","Advice",NA,"mon.27.8c9a",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"155",1990,2233,2524,1942,2178,2411,2643,NA,3790,NA,0.79,0.814,0.839,"Stock published","Advice",NA,"mon.27.8c9a",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"156",1991,1064,1251,878,1990,2213,2436,NA,3640,NA,0.811,0.834,0.857,"Stock published","Advice",NA,"mon.27.8c9a",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"157",1992,1321,1506,1137,1911,2114,2317,NA,3382,NA,0.841,0.867,0.893,"Stock published","Advice",NA,"mon.27.8c9a",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"158",1993,1699,1931,1467,1780,1973,2165,NA,2329,NA,0.603,0.626,0.65,"Stock published","Advice",NA,"mon.27.8c9a",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"159",1994,3127,3432,2823,1841,2065,2289,NA,2007,NA,0.479,0.5,0.523,"Stock published","Advice",NA,"mon.27.8c9a",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"160",1995,1821,2078,1564,2062,2333,2605,NA,1834,NA,0.317,0.333,0.349,"Stock published","Advice",NA,"mon.27.8c9a",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"161",1996,335,426,243,2964,3295,3626,NA,2955,NA,0.369,0.386,0.403,"Stock published","Advice",NA,"mon.27.8c9a",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"162",1997,282,342,223,4000,4362,4724,NA,3714,NA,0.43,0.449,0.469,"Stock published","Advice",NA,"mon.27.8c9a",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"163",1998,224,280,167,4382,4749,5116,NA,2981,NA,0.361,0.381,0.401,"Stock published","Advice",NA,"mon.27.8c9a",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"164",1999,742,837,647,4209,4588,4967,NA,1932,NA,0.275,0.295,0.315,"Stock published","Advice",NA,"mon.27.8c9a",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"165",2000,646,778,513,3847,4248,4649,NA,1259,NA,0.223,0.237,0.252,"Stock published","Advice",NA,"mon.27.8c9a",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"166",2001,3714,4052,3376,3558,3988,4417,NA,788,NA,0.152,0.164,0.176,"Stock published","Advice",NA,"mon.27.8c9a",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"167",2002,1619,1884,1353,3726,4187,4648,NA,1090,NA,0.179,0.189,0.199,"Stock published","Advice",NA,"mon.27.8c9a",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"168",2003,348,464,232,4308,4808,5308,NA,2324,NA,0.278,0.292,0.306,"Stock published","Advice",NA,"mon.27.8c9a",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"169",2004,2167,2454,1880,5335,5878,6422,NA,3257,NA,0.314,0.332,0.351,"Stock published","Advice",NA,"mon.27.8c9a",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"170",2005,1370,1608,1132,6219,6813,7407,NA,3824,NA,0.364,0.385,0.406,"Stock published","Advice",NA,"mon.27.8c9a",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"171",2006,1284,1469,1099,5894,6525,7156,NA,2997,NA,0.326,0.344,0.362,"Stock published","Advice",NA,"mon.27.8c9a",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"172",2007,713,861,564,5622,6304,6986,NA,2378,NA,0.261,0.278,0.295,"Stock published","Advice",NA,"mon.27.8c9a",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"173",2008,777,933,622,5910,6657,7405,NA,2371,NA,0.241,0.258,0.275,"Stock published","Advice",NA,"mon.27.8c9a",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"174",2009,879,1051,708,6220,7028,7837,NA,2306,NA,0.235,0.254,0.274,"Stock published","Advice",NA,"mon.27.8c9a",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"175",2010,1513,1771,1255,6247,7122,7996,NA,1618,NA,0.169,0.183,0.197,"Stock published","Advice",NA,"mon.27.8c9a",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"176",2011,1177,1426,929,6482,7442,8402,NA,1157,NA,0.122,0.133,0.143,"Stock published","Advice",NA,"mon.27.8c9a",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"177",2012,530,696,365,7142,8204,9266,NA,1395,NA,0.128,0.139,0.15,"Stock published","Advice",NA,"mon.27.8c9a",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"178",2013,818,1022,615,7951,9142,10333,NA,1541,NA,0.124,0.136,0.149,"Stock published","Advice",NA,"mon.27.8c9a",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"179",2014,1559,1862,1256,8854,10217,11580,NA,2032,NA,0.152,0.169,0.187,"Stock published","Advice",NA,"mon.27.8c9a",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"180",2015,247,346,148,9119,10679,12239,NA,1771,NA,0.133,0.148,0.162,"Stock published","Advice",NA,"mon.27.8c9a",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"181",2016,214,293,135,9266,11051,12835,NA,1809,NA,0.136,0.156,0.176,"Stock published","Advice",NA,"mon.27.8c9a",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"182",2017,202,276,127,9291,11351,13411,NA,1446,NA,0.104,0.125,0.145,"Stock published","Advice",NA,"mon.27.8c9a",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"183",2018,403,550,256,9410,11784,14157,NA,1144,NA,0.084,0.104,0.125,"Stock published","Advice",NA,"mon.27.8c9a",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"184",2019,1053,1526,581,9309,11958,14607,NA,909,NA,0.074,0.092,0.11,"Stock published","Advice",NA,"mon.27.8c9a",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"185",2020,539,841,237,8949,11802,14656,NA,722,NA,0.069,0.083,0.096,"Stock published","Advice",NA,"mon.27.8c9a",0,2021,"tonnes","SSB","tonnes","F","Year-1"
+"186",2021,706,NA,NA,8618,11625,14631,NA,NA,NA,NA,NA,NA,"Stock published","Advice",NA,"mon.27.8c9a",0,2021,"tonnes","SSB","tonnes","F","Year-1"

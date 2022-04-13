@@ -1,0 +1,1024 @@
+---
+title: 'Known-biomass production models: the case study of the Bay the Biscay and
+  Iberian Coast Ecoregion'
+author: ""
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    number_sections: no
+    toc: yes
+    toc_float: yes
+  pdf_document:
+    number_sections: no
+    toc: yes
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+# Known-biomass production models (KBPMs) 
+
+## Southern hake
+
+```{r}
+Data_hake<-read.csv("Hake_aux.csv",header = TRUE, sep= ";", encoding="UTF-8")
+
+Data_Sh<-subset(Data_hake, Data_hake[,17] == "hke.27.8c9a")
+min(Data_Sh$Year);max(Data_Sh$Year)
+
+
+```
+
+
+Surplus production and average SSB:
+
+```{r}
+B=Data_Sh$SSB; C=Data_Sh$catches
+SP=B[-1]; l=length(B); B_aver=B[-1]
+    for (i in 1:(l-1)){
+      SP[i]=B[i+1]-B[i]+C[i]
+      B_aver[i]=(B[i+1]+B[i])/2
+    }
+    B=B_aver
+# Delete last year
+Data_Sh=Data_Sh[-l,]
+Data_Sh$SSB_aver=B_aver    
+Data_Sh$SP=SP  
+```
+
+Fit model:
+
+```{r}
+model_Sh <- nls(SP~a*SSB_aver + b*SSB_aver^2, start=list(a=1.4, b=-0.0000226), data=Data_Sh)
+summary(model_Sh)
+```
+
+
+Reference points:
+
+```{r}
+
+RF.Schaefer=function(model){
+  
+  a=coefficients(model)[1]
+  b=coefficients(model)[2]
+  
+  B0<-as.numeric(-a/b)
+  Bmsy<-as.numeric(B0/2)
+  MSY<-as.numeric(a*Bmsy+b*Bmsy^2)
+  x<-as.numeric(MSY/B0)
+  Fmsy=as.numeric(a/2)
+  
+RP=c(round(B0),round(Bmsy),round(Fmsy,2),round(MSY),round(x,2))
+RP=as.data.frame(RP)
+rownames(RP)=c("SSB0","SSBmsy","Fmsy","MSY","MSY/SSB0")
+return(RP)
+}
+
+RF.Schaefer(model_Sh)
+```
+
+Plot of the fit:
+
+
+
+````{r}
+a=coefficients(model_Sh)[1]
+b=coefficients(model_Sh)[2];n=2
+cut=(-a/b)^(1/(n-1))
+av <- seq(0, cut, length.out = 3*length(Data_Sh$SSB_aver))
+bv <- predict(model_Sh, newdata=(list(SSB_aver=av)))
+
+df_aux=data.frame(av,bv)
+
+
+leg=c(min(Data_Sh$Year),max(Data_Sh$Year))
+vec=min(df_aux$bv,Data_Sh$SP)
+vec1=max(df_aux$bv,Data_Sh$SP)
+last=dim(Data_Sh)[1]
+plot(df_aux$av,df_aux$bv, type="l",
+                     col="black",lwd=2,xlab="SSB",ylab="SP",
+                     main="Southern hake",
+                     ylim=c(vec,vec1))
+points(Data_Sh$SSB_aver,Data_Sh$SP,pch=19,col="#56B4E9")
+lines(Data_Sh$SSB_aver,Data_Sh$SP,lwd=2,col="#56B4E9")
+points(Data_Sh$SSB_aver[1],Data_Sh$SP[1],pch=17,col="red",cex=1.5)
+points(Data_Sh$SSB_aver[last],Data_Sh$SP[last],pch=15,col="red",cex=1.5)
+abline(h=0,lty=3,col="grey")
+legend("topleft", legend=leg,bg="transparent",
+                       pch=c(17,15), cex=0.7,
+                       box.lty=0,col="red",x.intersp = 0.3, y.intersp = 0.75)
+
+
+
+```
+
+## Northern hake
+
+```{r}
+Data_hake<-read.csv("Hake.csv",header = TRUE, sep= ",", encoding="UTF-8")
+Data_hake=Data_hake[,-1]
+Data_Nh<-subset(Data_hake, Data_hake[,17] == "hke.27.3a46-8abd")
+min(Data_Nh$Year);max(Data_Nh$Year)
+
+
+```
+
+
+Surplus production and average SSB:
+
+```{r}
+B=Data_Nh$SSB; C=Data_Nh$catches
+SP=B[-1]; l=length(B); B_aver=B[-1]
+    for (i in 1:(l-1)){
+      SP[i]=B[i+1]-B[i]+C[i]
+      B_aver[i]=(B[i+1]+B[i])/2
+    }
+    B=B_aver
+# Delete last year
+Data_Nh=Data_Nh[-l,]
+Data_Nh$SSB_aver=B_aver    
+Data_Nh$SP=SP  
+```
+
+Fit model:
+
+```{r}
+model_Nh <- nls(SP~a*SSB_aver + b*SSB_aver^2, start=list(a=1.4, b=-0.0000226), data=Data_Nh)
+summary(model_Nh)
+```
+
+
+Reference points:
+
+```{r}
+
+RF.Schaefer(model_Nh)
+```
+
+Plot of the fit:
+
+
+
+````{r}
+a=coefficients(model_Nh)[1]
+b=coefficients(model_Nh)[2];n=2
+cut=(-a/b)^(1/(n-1))
+av <- seq(0, cut, length.out = 3*length(Data_Nh$SSB_aver))
+bv <- predict(model_Nh, newdata=(list(SSB_aver=av)))
+
+df_aux=data.frame(av,bv)
+
+
+leg=c(min(Data_Nh$Year),max(Data_Nh$Year))
+vec=min(df_aux$bv,Data_Nh$SP)
+vec1=max(df_aux$bv,Data_Nh$SP)
+last=dim(Data_Nh)[1]
+plot(df_aux$av,df_aux$bv, type="l",
+                     col="black",lwd=2,xlab="SSB",ylab="SP",
+                     main="Northern hake",
+                     ylim=c(vec,vec1))
+points(Data_Nh$SSB_aver,Data_Nh$SP,pch=19,col="#56B4E9")
+lines(Data_Nh$SSB_aver,Data_Nh$SP,lwd=2,col="#56B4E9")
+points(Data_Nh$SSB_aver[1],Data_Nh$SP[1],pch=17,col="red",cex=1.5)
+points(Data_Nh$SSB_aver[last],Data_Nh$SP[last],pch=15,col="red",cex=1.5)
+abline(h=0,lty=3,col="grey")
+legend(c(vec,vec1), legend=leg,bg="transparent",
+                       pch=c(17,15), cex=0.7,
+                       box.lty=0,col="red",x.intersp = 0.3, y.intersp = 0.65)
+
+
+
+```
+
+
+## Northern anglerfish
+
+```{r}
+Data_anglerfish<-read.csv("Anglerfish.csv",header = TRUE, sep= ",", encoding="UTF-8")
+Data_anglerfish=Data_anglerfish[,-1]
+Data_Na<-subset(Data_anglerfish, Data_anglerfish[,17] == "mon.27.78abd")
+min(Data_Na$Year);max(Data_Na$Year)
+
+
+```
+
+
+Surplus production and average SSB:
+
+```{r}
+B=Data_Na$SSB; C=Data_Na$catches
+SP=B[-1]; l=length(B); B_aver=B[-1]
+    for (i in 1:(l-1)){
+      SP[i]=B[i+1]-B[i]+C[i]
+      B_aver[i]=(B[i+1]+B[i])/2
+    }
+    B=B_aver
+# Delete last year
+Data_Na=Data_Na[-l,]
+Data_Na$SSB_aver=B_aver    
+Data_Na$SP=SP  
+```
+
+Fit model:
+
+```{r}
+model_Na <- nls(SP~a*SSB_aver + b*SSB_aver^2, start=list(a=1.4, b=-0.0000226), data=Data_Na)
+summary(model_Na)
+```
+
+
+Reference points:
+
+```{r}
+
+RF.Schaefer(model_Na)
+```
+
+Plot of the fit:
+
+
+
+````{r}
+a=coefficients(model_Na)[1]
+b=coefficients(model_Na)[2];n=2
+cut=(-a/b)^(1/(n-1))
+av <- seq(0, cut, length.out = 3*length(Data_Na$SSB_aver))
+bv <- predict(model_Na, newdata=(list(SSB_aver=av)))
+
+df_aux=data.frame(av,bv)
+
+
+leg=c(min(Data_Na$Year),max(Data_Na$Year))
+vec=min(df_aux$bv,Data_Na$SP)
+vec1=max(df_aux$bv,Data_Na$SP)
+last=dim(Data_Na)[1]
+plot(df_aux$av,df_aux$bv, type="l",
+                     col="black",lwd=2,xlab="SSB",ylab="SP",
+                     main="Northern anglerfish",
+                     ylim=c(vec,vec1))
+points(Data_Na$SSB_aver,Data_Na$SP,pch=19,col="#56B4E9")
+lines(Data_Na$SSB_aver,Data_Na$SP,lwd=2,col="#56B4E9")
+points(Data_Na$SSB_aver[1],Data_Na$SP[1],pch=17,col="red",cex=1.5)
+points(Data_Na$SSB_aver[last],Data_Na$SP[last],pch=15,col="red",cex=1.5)
+abline(h=0,lty=3,col="grey")
+legend(c(vec,vec1), legend=leg,bg="transparent",
+                       pch=c(17,15), cex=0.7,
+                       box.lty=0,col="red",x.intersp = 0.3, y.intersp = 0.65)
+
+
+
+```
+
+
+
+## Southern anglerfish
+
+```{r}
+Data_Sa<-subset(Data_anglerfish, Data_anglerfish[,17] == "mon.27.8c9a")
+min(Data_Sa$Year);max(Data_Sa$Year)
+
+
+```
+
+
+Surplus production and average SSB:
+
+```{r}
+Data_Sa$catches=Data_Sa$landings
+B=Data_Sa$SSB; C=Data_Sa$landings
+SP=B[-1]; l=length(B); B_aver=B[-1]
+    for (i in 1:(l-1)){
+      SP[i]=B[i+1]-B[i]+C[i]
+      B_aver[i]=(B[i+1]+B[i])/2
+    }
+    B=B_aver
+# Delete last year
+Data_Sa=Data_Sa[-l,]
+Data_Sa$SSB_aver=B_aver    
+Data_Sa$SP=SP  
+```
+
+Fit model:
+
+```{r}
+model_Sa <- nls(SP~a*SSB_aver + b*SSB_aver^2, start=list(a=1.4, b=-0.0000226), data=Data_Sa)
+summary(model_Sa)
+```
+
+
+Reference points:
+
+```{r}
+
+RF.Schaefer(model_Sa)
+```
+
+Plot of the fit:
+
+
+
+````{r}
+a=coefficients(model_Sa)[1]
+b=coefficients(model_Sa)[2];n=2
+cut=(-a/b)^(1/(n-1))
+av <- seq(0, cut, length.out = 3*length(Data_Sa$SSB_aver))
+bv <- predict(model_Sa, newdata=(list(SSB_aver=av)))
+
+df_aux=data.frame(av,bv)
+
+
+leg=c(min(Data_Sa$Year),max(Data_Sa$Year))
+vec=min(df_aux$bv,Data_Sa$SP)
+vec1=max(df_aux$bv,Data_Sa$SP)
+last=dim(Data_Sa)[1]
+plot(df_aux$av,df_aux$bv, type="l",
+                     col="black",lwd=2,xlab="SSB",ylab="SP",
+                     main="Southern anglerfish",
+                     ylim=c(vec,vec1))
+points(Data_Sa$SSB_aver,Data_Sa$SP,pch=19,col="#56B4E9")
+lines(Data_Sa$SSB_aver,Data_Sa$SP,lwd=2,col="#56B4E9")
+points(Data_Sa$SSB_aver[1],Data_Sa$SP[1],pch=17,col="red",cex=1.5)
+points(Data_Sa$SSB_aver[last],Data_Sa$SP[last],pch=15,col="red",cex=1.5)
+abline(h=0,lty=3,col="grey")
+legend(c(vec,vec1), legend=leg,bg="transparent",
+                       pch=c(17,15), cex=0.7,
+                       box.lty=0,col="red",x.intersp = 0.3, y.intersp = 0.65)
+
+
+
+```
+
+
+
+## Northern megrim
+
+```{r}
+Data_megrim<-read.csv("Megrim.csv",header = TRUE, sep= ",", encoding="UTF-8")
+Data_megrim=Data_megrim[,-1]
+Data_Nm<-subset(Data_megrim, Data_megrim[,17] == "meg.27.7b-k8abd")
+min(Data_Nm$Year);max(Data_Nm$Year)
+
+
+```
+
+
+Surplus production and average SSB:
+
+```{r}
+Data_Nm$catches=Data_Nm$landings+Data_Nm$discards
+B=Data_Nm$SSB; C=Data_Nm$catches
+SP=B[-1]; l=length(B); B_aver=B[-1]
+    for (i in 1:(l-1)){
+      SP[i]=B[i+1]-B[i]+C[i]
+      B_aver[i]=(B[i+1]+B[i])/2
+    }
+    B=B_aver
+# Delete last year
+Data_Nm=Data_Nm[-l,]
+Data_Nm$SSB_aver=B_aver    
+Data_Nm$SP=SP  
+```
+
+Fit model:
+
+```{r}
+model_Nm <- nls(SP~a*SSB_aver + b*SSB_aver^2, start=list(a=1.4, b=-0.0000226), data=Data_Nm)
+summary(model_Nm)
+```
+
+
+Reference points:
+
+```{r}
+
+RF.Schaefer(model_Nm)
+```
+
+Plot of the fit:
+
+
+
+````{r}
+a=coefficients(model_Nm)[1]
+b=coefficients(model_Nm)[2];n=2
+cut=(-a/b)^(1/(n-1))
+av <- seq(0, cut, length.out = 3*length(Data_Nm$SSB_aver))
+bv <- predict(model_Nm, newdata=(list(SSB_aver=av)))
+
+df_aux=data.frame(av,bv)
+
+
+leg=c(min(Data_Nm$Year),max(Data_Nm$Year))
+vec=min(df_aux$bv,Data_Nm$SP)
+vec1=max(df_aux$bv,Data_Nm$SP)
+last=dim(Data_Nm)[1]
+plot(df_aux$av,df_aux$bv, type="l",
+                     col="black",lwd=2,xlab="SSB",ylab="SP",
+                     main="Northern megrim",
+                     ylim=c(vec,vec1))
+points(Data_Nm$SSB_aver,Data_Nm$SP,pch=19,col="#56B4E9")
+lines(Data_Nm$SSB_aver,Data_Nm$SP,lwd=2,col="#56B4E9")
+points(Data_Nm$SSB_aver[1],Data_Nm$SP[1],pch=17,col="red",cex=1.5)
+points(Data_Nm$SSB_aver[last],Data_Nm$SP[last],pch=15,col="red",cex=1.5)
+abline(h=0,lty=3,col="grey")
+legend(c(vec,vec1), legend=leg,bg="transparent",
+                       pch=c(17,15), cex=0.7,
+                       box.lty=0,col="red",x.intersp = 0.3, y.intersp = 0.65)
+
+
+
+```
+
+
+
+## Southern megrim
+
+```{r}
+
+Data_Sm<-subset(Data_megrim, Data_megrim[,17] == "meg.27.8c9a")
+min(Data_Sm$Year);max(Data_Sm$Year)
+
+
+```
+
+
+Surplus production and average SSB:
+
+```{r}
+Data_Sm$catches=Data_Sm$landings+Data_Sm$discards
+B=Data_Sm$SSB; C=Data_Sm$catches
+SP=B[-1]; l=length(B); B_aver=B[-1]
+    for (i in 1:(l-1)){
+      SP[i]=B[i+1]-B[i]+C[i]
+      B_aver[i]=(B[i+1]+B[i])/2
+    }
+    B=B_aver
+# Delete last year
+Data_Sm=Data_Sm[-l,]
+Data_Sm$SSB_aver=B_aver    
+Data_Sm$SP=SP  
+```
+
+Fit model:
+
+```{r}
+model_Sm <- nls(SP~a*SSB_aver + b*SSB_aver^2, start=list(a=1.4, b=-0.0000226), data=Data_Sm, algorithm = "port",
+                lower=c(0,-Inf),upper=c(Inf,-0.0000226))
+summary(model_Sm)
+```
+
+
+Reference points:
+
+```{r}
+RF.Schaefer(model_Sm)
+```
+
+Plot of the fit:
+
+
+
+````{r}
+a=coefficients(model_Sm)[1]
+b=coefficients(model_Sm)[2];n=2
+cut=(-a/b)^(1/(n-1))
+av <- seq(0, cut, length.out = 3*length(Data_Sm$SSB_aver))
+bv <- predict(model_Sm, newdata=(list(SSB_aver=av)))
+
+df_aux=data.frame(av,bv)
+
+
+leg=c(min(Data_Sm$Year),max(Data_Sm$Year))
+vec=min(df_aux$bv,Data_Sm$SP)
+vec1=max(df_aux$bv,Data_Sm$SP)
+last=dim(Data_Sm)[1]
+plot(df_aux$av,df_aux$bv, type="l",
+                     col="black",lwd=2,xlab="SSB",ylab="SP",
+                     main="Southern megrim",
+                     ylim=c(vec,vec1))
+points(Data_Sm$SSB_aver,Data_Sm$SP,pch=19,col="#56B4E9")
+lines(Data_Sm$SSB_aver,Data_Sm$SP,lwd=2,col="#56B4E9")
+points(Data_Sm$SSB_aver[1],Data_Sm$SP[1],pch=17,col="red",cex=1.5)
+points(Data_Sm$SSB_aver[last],Data_Sm$SP[last],pch=15,col="red",cex=1.5)
+abline(h=0,lty=3,col="grey")
+legend(c(vec,vec1), legend=leg,bg="transparent",
+                       pch=c(17,15), cex=0.7,
+                       box.lty=0,col="red",x.intersp = 0.3, y.intersp = 0.65)
+
+
+
+```
+
+
+
+#  Identifying possible regime shifts
+
+
+
+## Northern hake 
+
+### 2017-2014-2011-2008-2005
+
+```{r}
+years=c(2017,2014,2011,2008,2005)
+
+nR=5
+lastyear=max(Data_Nh$Year)
+modelretro=list()
+vec=data.frame(matrix(0, ncol=5,nrow=nR))
+names_retro=1:nR
+for (i in 1:nR){
+    newdf=subset(Data_Nh, Year<=(years[i]))
+    fit <- nls(SP~a*SSB_aver + b*SSB_aver^2, start=list(a=1.4, b=-0.0000226), data=newdf)
+    val=RF.Schaefer(fit)
+
+    vec[i,]=t(val)
+    print(summary(fit))
+    modelretro[[i]]=fit
+    names_retro[i]=paste(min(Data_Nh$Year), "-", years[i])
+
+  }
+
+  names(modelretro)=names_retro
+  
+  colnames(vec)=c("B0","B_MSY","F_MSY","MSY","MSYoverB0")
+  rownames(vec)=names_retro
+
+  vec
+
+  # Plots Retrospective  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  bretro=list();vec_bv=0
+  aretro=list()
+  for (i in 1:nR){
+    fit=modelretro[[i]]
+    a=coefficients(fit)[1]
+    b=coefficients(fit)[2];n=2
+    cut=(-a/b)^(1/(n-1))
+    av <- seq(0, cut, length.out = 3*length(Data_Nh$SSB_aver))
+    bretro[[i]] <- predict(fit, newdata=(list(SSB_aver=av)))
+    aretro[[i]]=av
+    vec_bv=c(vec_bv,bretro[[i]])
+}
+
+a=coefficients(model_Nh)[1]
+b=coefficients(model_Nh)[2];n=2
+cut=(-a/b)^(1/(n-1))
+av <- seq(0, cut, length.out = 3*length(Data_Nh$SSB_aver))
+bv <- predict(model_Nh, newdata=(list(SSB_aver=av)))
+
+df_aux=data.frame(av,bv)
+
+  leg=c(min(Data_Nh$Year),max(Data_Nh$Year))
+  vec=min(vec_bv,Data_Nh$SP,df_aux$bv)
+  vec1=max(vec_bv,Data_Nh$SP,df_aux$bv)
+  vec2=min(unlist(aretro),Data_Nh$SSB_aver,df_aux$av)
+  vec3=max(unlist(aretro),Data_Nh$SSB_aver,df_aux$av)
+  last=dim(Data_Nh)[1]
+
+  plot(Data_Nh$SSB_aver,Data_Nh$SP,lwd=2,col="#56B4E9",xlab="SSB",ylab="SP",
+                      main="Northern hake",
+                 ylim=c(vec,vec1),type="l", xlim=c(vec2,vec3))
+points(Data_Nh$SSB_aver,Data_Nh$SP,pch=19,col="#56B4E9")
+points(Data_Nh$SSB_aver[1],Data_Nh$SP[1],pch=17,col="red",cex=1.5)
+points(Data_Nh$SSB_aver[last],Data_Nh$SP[last],pch=15,col="red",cex=1.5)
+lines(df_aux$av,df_aux$bv,col="black",lwd=2)
+
+  for (i in 1:nR){
+    lines(aretro[[i]],bretro[[i]],col=i+9,lwd=2)
+  }
+
+  colours=(1:nR)+9
+  abline(h=0,lty=3,col="grey")
+ legend("topleft",bg="transparent", legend=c(leg),
+                   pch=c(17,15), cex=0.8,
+                   box.lty=0,col="red",
+                   x.intersp = 0.3, y.intersp = 0.75)
+  legend("topright", bg="transparent",legend=c(paste(min(Data_Nh$Year), "-", lastyear),names_retro),
+                   lwd=2, cex=0.8,
+                   box.lty=0,col=c("black",colours),
+                   x.intersp = 0.4, y.intersp = 0.75)
+
+
+
+
+```
+
+
+# Multi-species KBPMs
+
+
+## South
+
+
+```{r}
+
+Years_min=c(min(Data_Sa$Year), min(Data_Sh$Year), min(Data_Sm$Year))
+Years_max=c(max(Data_Sa$Year), max(Data_Sh$Year), max(Data_Sm$Year))
+min=max(Years_min);min
+max=min(Years_max);max
+
+Data_Sa_sub=subset(Data_Sa,Data_Sa$Year<=max & Data_Sa$Year>=min)
+Data_Sh_sub=subset(Data_Sh,Data_Sh$Year<=max & Data_Sh$Year>=min)
+Data_Sm_sub=subset(Data_Sm,Data_Sm$Year<=max & Data_Sm$Year>=min)
+
+SSB_add=rowSums(data.frame(Data_Sa_sub$SSB, Data_Sh_sub$SSB, Data_Sm_sub$SSB))
+Catches_add=rowSums(data.frame(Data_Sa_sub$catches, Data_Sh_sub$catches, Data_Sm_sub$catches))
+Data_south=data.frame(SSB=SSB_add, catches=Catches_add, Year=min:max)
+
+min(Data_south$Year);max(Data_south$Year)
+
+
+```
+
+
+Surplus production and average SSB:
+
+```{r}
+B=Data_south$SSB; C=Data_south$catches
+SP=B[-1]; l=length(B); B_aver=B[-1]
+    for (i in 1:(l-1)){
+      SP[i]=B[i+1]-B[i]+C[i]
+      B_aver[i]=(B[i+1]+B[i])/2
+    }
+    B=B_aver
+# Delete last year
+Data_south=Data_south[-l,]
+Data_south$SSB_aver=B_aver    
+Data_south$SP=SP  
+```
+
+Fit model:
+
+```{r}
+model_south <- nls(SP~a*SSB_aver + b*SSB_aver^2, start=list(a=1.4, b=-0.0000226), data=Data_south)
+summary(model_south)
+```
+
+
+Reference points:
+
+```{r}
+RF.Schaefer(model_south)
+```
+
+Plot of the fit:
+
+
+
+````{r}
+a=coefficients(model_south)[1]
+b=coefficients(model_south)[2];n=2
+cut=(-a/b)^(1/(n-1))
+av <- seq(0, cut, length.out = 3*length(Data_south$SSB_aver))
+bv <- predict(model_south, newdata=(list(SSB_aver=av)))
+
+df_aux=data.frame(av,bv)
+
+
+leg=c(min(Data_south$Year),max(Data_south$Year))
+vec=min(df_aux$bv,Data_south$SP)
+vec1=max(df_aux$bv,Data_south$SP)
+last=dim(Data_south)[1]
+plot(df_aux$av,df_aux$bv, type="l",
+                     col="black",lwd=2,xlab="SSB",ylab="SP",
+                     main="South",
+                     ylim=c(vec,vec1))
+points(Data_south$SSB_aver,Data_south$SP,pch=19,col="#56B4E9")
+lines(Data_south$SSB_aver,Data_south$SP,lwd=2,col="#56B4E9")
+points(Data_south$SSB_aver[1],Data_south$SP[1],pch=17,col="red",cex=1.5)
+points(Data_south$SSB_aver[last],Data_south$SP[last],pch=15,col="red",cex=1.5)
+abline(h=0,lty=3,col="grey")
+legend(c(vec,vec1), legend=leg,bg="transparent",
+                       pch=c(17,15), cex=0.7,
+                       box.lty=0,col="red",x.intersp = 0.3, y.intersp = 0.65)
+
+
+
+```
+
+
+## North
+
+
+```{r}
+
+Years_min=c(min(Data_Na$Year), min(Data_Nh$Year), min(Data_Nm$Year))
+Years_max=c(max(Data_Na$Year), max(Data_Nh$Year), max(Data_Nm$Year))
+min=max(Years_min);min
+max=min(Years_max);max
+
+Data_Na_sub=subset(Data_Na,Data_Na$Year<=max & Data_Na$Year>=min)
+Data_Nh_sub=subset(Data_Nh,Data_Nh$Year<=max & Data_Nh$Year>=min)
+Data_Nm_sub=subset(Data_Nm,Data_Nm$Year<=max & Data_Nm$Year>=min)
+
+SSB_add=rowSums(data.frame(Data_Na_sub$SSB, Data_Nh_sub$SSB, Data_Nm_sub$SSB))
+Catches_add=rowSums(data.frame(Data_Na_sub$catches, Data_Nh_sub$catches, Data_Nm_sub$catches))
+Data_north=data.frame(SSB=SSB_add, catches=Catches_add, Year=min:max)
+
+min(Data_north$Year);max(Data_north$Year)
+
+
+```
+
+
+Surplus production and average SSB:
+
+```{r}
+B=Data_north$SSB; C=Data_north$catches
+SP=B[-1]; l=length(B); B_aver=B[-1]
+    for (i in 1:(l-1)){
+      SP[i]=B[i+1]-B[i]+C[i]
+      B_aver[i]=(B[i+1]+B[i])/2
+    }
+    B=B_aver
+# Delete last year
+Data_north=Data_north[-l,]
+Data_north$SSB_aver=B_aver    
+Data_north$SP=SP  
+```
+
+Fit model:
+
+```{r}
+model_north <- nls(SP~a*SSB_aver + b*SSB_aver^2, start=list(a=1.4, b=-0.0000226), data=Data_north)
+summary(model_north)
+```
+
+
+Reference points:
+
+```{r}
+
+
+RF.Schaefer(model_north)
+```
+
+Plot of the fit:
+
+
+
+````{r}
+a=coefficients(model_north)[1]
+b=coefficients(model_north)[2];n=2
+cut=(-a/b)^(1/(n-1))
+av <- seq(0, cut, length.out = 3*length(Data_north$SSB_aver))
+bv <- predict(model_north, newdata=(list(SSB_aver=av)))
+
+df_aux=data.frame(av,bv)
+
+
+leg=c(min(Data_north$Year),max(Data_north$Year))
+vec=min(df_aux$bv,Data_north$SP)
+vec1=max(df_aux$bv,Data_north$SP)
+last=dim(Data_north)[1]
+plot(df_aux$av,df_aux$bv, type="l",
+                     col="black",lwd=2,xlab="SSB",ylab="SP",
+                     main="North",
+                     ylim=c(vec,vec1))
+points(Data_north$SSB_aver,Data_north$SP,pch=19,col="#56B4E9")
+lines(Data_north$SSB_aver,Data_north$SP,lwd=2,col="#56B4E9")
+points(Data_north$SSB_aver[1],Data_north$SP[1],pch=17,col="red",cex=1.5)
+points(Data_north$SSB_aver[last],Data_north$SP[last],pch=15,col="red",cex=1.5)
+abline(h=0,lty=3,col="grey")
+legend(c(vec,vec1), legend=leg,bg="transparent",
+                       pch=c(17,15), cex=0.7,
+                       box.lty=0,col="red",x.intersp = 0.3, y.intersp = 0.65)
+
+
+
+```
+
+
+
+## Global
+
+
+```{r}
+Years_min=c(min(Data_north$Year), min(Data_south$Year))
+Years_max=c(max(Data_north$Year), max(Data_south$Year))
+min=max(Years_min);min
+max=min(Years_max);max
+
+Data_south_sub=subset(Data_south,Data_south$Year<=max & Data_south$Year>=min)
+Data_north_sub=subset(Data_north,Data_north$Year<=max & Data_north$Year>=min)
+
+SSB_add=rowSums(data.frame(Data_south_sub$SSB,Data_north_sub$SSB))
+Catches_add=rowSums(data.frame(Data_south_sub$catches,Data_north_sub$catches))
+Data_global=data.frame(SSB=SSB_add, catches=Catches_add, Year=min:max)
+
+min(Data_global$Year);max(Data_global$Year)
+
+
+```
+
+
+Surplus production and average SSB:
+
+```{r}
+B=Data_global$SSB; C=Data_global$catches
+SP=B[-1]; l=length(B); B_aver=B[-1]
+    for (i in 1:(l-1)){
+      SP[i]=B[i+1]-B[i]+C[i]
+      B_aver[i]=(B[i+1]+B[i])/2
+    }
+    B=B_aver
+# Delete last year
+Data_global=Data_global[-l,]
+Data_global$SSB_aver=B_aver    
+Data_global$SP=SP  
+```
+
+Fit model:
+
+```{r}
+model_global <- nls(SP~a*SSB_aver + b*SSB_aver^2, start=list(a=1.4, b=-0.0000226), data=Data_global)
+summary(model_global)
+```
+
+
+Reference points:
+
+```{r}
+
+RF.Schaefer(model_global)
+```
+
+Plot of the fit:
+
+
+
+````{r}
+a=coefficients(model_global)[1]
+b=coefficients(model_global)[2];n=2
+cut=(-a/b)^(1/(n-1))
+av <- seq(0, cut, length.out = 3*length(Data_global$SSB_aver))
+bv <- predict(model_global, newdata=(list(SSB_aver=av)))
+
+df_aux=data.frame(av,bv)
+
+
+leg=c(min(Data_global$Year),max(Data_global$Year))
+vec=min(df_aux$bv,Data_global$SP)
+vec1=max(df_aux$bv,Data_global$SP)
+last=dim(Data_global)[1]
+plot(df_aux$av,df_aux$bv, type="l",
+                     col="black",lwd=2,xlab="SSB",ylab="SP",
+                     main="Global",
+                     ylim=c(vec,vec1))
+points(Data_global$SSB_aver,Data_global$SP,pch=19,col="#56B4E9")
+lines(Data_global$SSB_aver,Data_global$SP,lwd=2,col="#56B4E9")
+points(Data_global$SSB_aver[1],Data_global$SP[1],pch=17,col="red",cex=1.5)
+points(Data_global$SSB_aver[last],Data_global$SP[last],pch=15,col="red",cex=1.5)
+abline(h=0,lty=3,col="grey")
+legend(c(vec,vec1), legend=leg,bg="transparent",
+                       pch=c(17,15), cex=0.7,
+                       box.lty=0,col="red",x.intersp = 0.3, y.intersp = 0.65)
+
+
+
+```
+
+
+#  Testing the environmental variability om stocks’ status
+
+## Selecting lag
+
+```{r}
+years=Data_Nh$Year
+SP=Data_Nh$SP
+nlag=4
+# NAO ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+NAO<-read.csv("NAO.csv",header = TRUE, sep = ";", encoding="UTF-8")
+y_env=NAO$Ano
+
+  f_year=years[1]
+  l_year=years[length(years)]
+  data_env=data.frame(SP,years)
+  ind=which(y_env==f_year)
+  ind1=which(y_env==l_year)
+  data_env$NAO=NAO$Mean[ind:ind1]
+  a=as.data.frame(matrix(0,nrow=nrow(data_env),ncol=nlag))
+  data_env=cbind(data_env,a)
+ vec_env=1:nlag
+  for (i in 1:nlag){
+    ind=which(y_env==(f_year-i))
+    ind1=which(y_env==(l_year-i))
+ 
+  data_env[,i+3]=NAO$Mean[ind:ind1]
+  vec_env[i]=paste("NAO lag",i)
+  colnames(data_env)=c("SP","years","NAO lag 0",vec_env)
+  }
+  aux=c("SP","years","NAO lag 0",vec_env)
+
+# AMO ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+AMO<-read.csv("AMO.csv",header = TRUE, sep = ";", encoding="UTF-8")
+AMO$Mean<-apply(AMO[,-1],1, mean)
+y_env=AMO$Ano
+
+  f_year=years[1]
+  l_year=years[length(years)]
+  ind=which(y_env==f_year)
+  ind1=which(y_env==l_year)
+  data_env$AMO=AMO$Mean[ind:ind1]
+a=as.data.frame(matrix(0,nrow=nrow(data_env),ncol=nlag))
+data_env=cbind(data_env,a)
+vec_env=1:nlag
+  for (i in 1:nlag){
+    ind=which(y_env==(f_year-i))
+    ind1=which(y_env==(l_year-i))
+  
+  data_env[,i+8]=AMO$Mean[ind:ind1]
+    vec_env[i]=paste("AMO lag",i)
+  colnames(data_env)=c(aux,"AMO lag 0",vec_env)
+}
+
+library(corrplot)
+cor.mtest <- function(mat, ...) {
+  mat <- as.matrix(mat)
+  n <- ncol(mat)
+  p.mat<- matrix(NA, n, n)
+  diag(p.mat) <- 0
+  for (i in 1:(n - 1)) {
+    for (j in (i + 1):n) {
+      tmp <- cor.test(mat[, i], mat[, j], ...)
+      p.mat[i, j] <- p.mat[j, i] <- tmp$p.value
+    }
+  }
+  colnames(p.mat) <- rownames(p.mat) <- colnames(mat)
+  p.mat
+}
+p.mat <- cor.mtest(data_env[,-2])
+corrplot(round(cor(as.matrix(data_env[,-2]),use="na.or.complete"),2),method="number",diag=T,p.mat = p.mat, sig.level = 0.05, type = "lower", number.cex = 0.6, tl.cex=0.4, tl.pos="d")
+
+
+```
+
+
+## Fitting
+
+```{r}
+Data_Nh$i=data_env$`AMO lag 4`
+```
+
+### Multiplicative
+
+
+
+```{r}
+
+model_M <- nls(SP~exp(1)^{c*i}*(a*SSB_aver + b*SSB_aver^2), start=list(a=1.4, b=-0.0000226,c=1), data=Data_Nh)
+summary(model_M)
+
+```
+
+### Additive
+
+```{r}
+
+model_A<- nls(SP~a*SSB_aver + b*SSB_aver^2+c*i, start=list(a=1.4, b=-0.0000226,c=1), data=Data_Nh)
+
+summary(model_A)
+```
+
+
+### Plot and error measures
+
+
+```{r}
+bv <- predict(model_Nh)
+bv1 <- predict(model_M)
+bv2 <- predict(model_A)
+
+
+MAPE=function(predicted, real){ (1/length(real))*(sum(abs((predicted-real)/real)))  }
+RMSE=function(predicted, real){sqrt(sum((predicted-real)^2)/length(real))}
+
+RMSE(bv1,Data_Nh$SP);RMSE(bv2,Data_Nh$SP);RMSE(bv,Data_Nh$SP)
+MAPE(bv1,Data_Nh$SP);MAPE(bv2,Data_Nh$SP);MAPE(bv,Data_Nh$SP)
+AIC(model_M);AIC(model_A);AIC(model_Nh)
+
+leg=c("Observed","Base model","Environmental Multiplicative","Environmental Additive")
+
+vec=min(c(bv,bv1,bv2,Data_Nh$SP))
+vec1=max(c(bv,bv1,bv2,Data_Nh$SP))
+plot(Data_Nh$Year,Data_Nh$SP,lwd=2,col="#56B4E9",xlab="Years",ylab="SP",
+                 main="Environmental fits",
+                 ylim=c(vec,vec1),type="b",pch=19)
+lines(Data_Nh$Year,bv,col=1,lwd=2)
+lines(Data_Nh$Year,bv1,col=2,lwd=2)
+lines(Data_Nh$Year,bv2,col=3,lwd=2)
+abline(h=0,lty=3,col="grey")
+
+legend("topleft",bg="transparent", legend=c(leg),
+                   lwd=c(NA,2,2,2), pch=c(19,NA,NA,NA), cex=0.7,
+                   box.lty=0,col=c("#56B4E9",1:3))
+
+```
